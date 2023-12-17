@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +7,25 @@
 
 :root {
   --white: #fff;
-  --gray-100: #afafaf;
-  --gray-200: #525252; //divisor
-  --gray-700: #15171b; // background Header
-  --gray-900: #111113; //background body;
-  --blue-900: #1fa4e5;
-  --yellow-500: #ffbe16;
+  --black: #000;
+  --yellow: #FFD700; // amarelo Pikachu
+  --blue: #0077cc; // azul água
+  --red: #FF0000; // vermelho Pokébola
+  --green: #4CAF50; // verde mato
+  --purple: #800080; // roxo psychic
+  --fire-orange: #FFA500; // laranja fogo
 }
 //media
 
-@media (max-width: 1080px) {
-  html {
-    font-size: 93.75%; // gera 15px
-  }
-}
 
-@media (max-width: 720px) {
   html {
-    font-size: 87.75%; // gera 14px
+    font-size: 62.5%; // gera 15px
   }
-}
+
+
 
 body {
+  font-size: 1.6rem;
   background: var(--gray-900);
 }
 

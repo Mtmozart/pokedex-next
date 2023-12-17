@@ -1,70 +1,74 @@
-.headerContainer {
-  height: 6rem;
-  width: 100%;
-  border: 1px solid var(--gray-200);
-  background: var(--gray-700);
-  border-radius: 10px;
-  display: flex;
- 
-}
-
-.headerContent {
-  width: 100%;
-  height: 6rem;
-  margin: 0 auto;
-  padding: 6px 20px;
+.nav_container{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: var(--white);
- 
-
-.logo{
-  cursor: pointer;
-  width: 50%;
-  height: 90%;
-  justify-content: center;
-  align-items: center;
-  img{
-  cursor: pointer;
-  width: 90px;
-  height: 90px;
-  }
-}
-.menu{
- width: 50%;
- height: 90%;
-
- ul{
-  width: 100%;
+  justify-content: space-around;
+  height: 8vh;
+  background-color: var(--yellow);
+  
+li{
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 1.1em;
-  color: var(--blue-900);
-  cursor: pointer;
-  @media(max-width: 990px) {
-    display: none;
+}
+a{
+  text-decoration: none;
+  color: var(--blue);
+  @media screen and (max-width: 768px) {
+  color: var(--white);
   }
- }
- li{  
-  border-radius: 10px;
-  padding: 5px;
-  margin: 40px 5px 5px 5px;
+  
 }
 
-li:hover{
-  color: var( --gray-900);
-  background-color: var(--gray-100);
+.brand{
+  text-transform: uppercase;
   font-weight: bold;
 }
 
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    background-color: var(--blue);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s;
+    }
+
+
+    .nav_menu_responsive{
+      transform: translateX(0);
+    }
+
+
 }
 
+.toogle{
+  border-radius: 5px;
+  padding: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--white);
+  background-color: var(--blue);
+  cursor: pointer;
+  display: none;
 
 
+  &:hover{
+    background: var(--white);
+    color: var(--blue);
+  }
 
+  @media screen and (max-width: 768px) {
+  display: block;
+  
+  }
+}
 
 }
