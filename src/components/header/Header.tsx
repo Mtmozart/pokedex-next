@@ -6,23 +6,29 @@ import Logo from '../../../public/images/pokémon_logo.svg'
 import { FaAlignJustify } from "react-icons/fa";<FaAlignJustify />
 
 export default function Header(){
-  const [navActive, setNavActive ] = useState('menu')
-  const  navToggler =  () => {
-    navActive === 'menu' ? setNavActive('menu nav_menu_responsive') : setNavActive('menu') ;
-  }
+  const [menu, setMenu ] = useState(false)
+  
+  const navToggler = () => {
+    setMenu((prevMenu) => {
+        return !prevMenu;
+    });
+  };
   return(
     <nav className={styles.nav_container}>
-      <a href="#" className={styles.brand}>Pokemon</a>
-    
-      <ul className={navActive}>
+      <a href="#" className={styles.brand}><Image alt="Pokemon logo" src={Logo}/></a>
+      <div className={`${styles.menu} ${menu ? styles.nav_menu_responsive : ""}`}>
+      <ul>
         <li className={styles.nav_item}><a href="" className="navlink">Home</a></li>
         <li className={styles.nav_item}><a href="" className="navlink">About</a></li>
         <li className={styles.nav_item}><a href="" className="navlink">Skills</a></li>
         <li className={styles.nav_item}><a href="" className="navlink">Portfólio</a></li>
         <li className={styles.nav_item}><a href="" className="navlink">Contato</a></li>
       </ul>
+      </div>
       
+      <div>
       <FaAlignJustify className={styles.toogle} onClick = {navToggler}/>
+      </div>
     </nav>
  
   

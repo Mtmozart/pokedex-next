@@ -5,6 +5,7 @@
   height: 8vh;
   background-color: var(--yellow);
   
+  
 li{
   list-style: none;
 }
@@ -13,39 +14,88 @@ a{
   color: var(--blue);
   @media screen and (max-width: 768px) {
   color: var(--white);
+  
   }
   
 }
 
 .brand{
-  text-transform: uppercase;
-  font-weight: bold;
-}
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content:left;
 
+  img{
+    padding-left: 40px;
+    height: 7vh;
+    width: 150px;
+  }
+}
 .menu{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
   gap: 3rem;
+ 
+  li {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline;
+    margin: 2px;
+    padding: 4px;
+    border-radius: 5px;
 
-
-  @media screen and (max-width: 768px) {
-    position: fixed;
-    top: 7vh;
-    right: 0;
-    width: 50%;
-    height: 93vh;
-    background-color: var(--blue);
-    flex-direction: column;
-    transform: translateX(100%);
-    transition: 0.5s;
+    &:hover{
+      background-color: var(--white);
     }
+  }
 
 
-    .nav_menu_responsive{
-      transform: translateX(0);
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      top: 8vh;
+      right: 0;
+      width: 50%;
+      max-width: 200px;
+      height: 93vh;
+      background-color: var(--blue);
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.5s;
+      font-size: 1.2em;
+      line-height: 1.5;
+
+      ul{
+        position: fixed;
+        top: 2vh;
+        left: 1vh;
+        width: 90%;
+      
+
+        li{
+          width: 100%;
+          display: flex;
+          margin: 0 auto;
+          
+        }
+        li:hover{
+          border-radius: 2px;
+          background-color: var(--fire-orange);
+       }
+    
     }
+  
 
+ 
+   }
+   &.nav_menu_responsive {
+    transform: translateX(0);
+    z-index: 100;
+  }
+    
+  
 
 }
 
@@ -67,8 +117,11 @@ a{
 
   @media screen and (max-width: 768px) {
   display: block;
-  
+  position: fixed;
+  right: 20px;
+  top: 2vh;
   }
 }
 
 }
+

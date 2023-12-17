@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 
 
@@ -18,11 +18,13 @@ async function getData() {
 
 export default async  function Home() {
   const pokemon = await getData();
-  console.log(pokemon);
+ 
   return (
       <>
      <main>
-     Olá mundo
+     <div className={styles.teste}>
+      teste
+     </div>
     </main>
      </>
     
