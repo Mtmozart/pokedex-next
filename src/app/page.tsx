@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
+import Card from '@/components/card/card';
 
 
 
@@ -23,7 +24,7 @@ export default async  function Home() {
       <>
      <main>
      <div className={styles.teste}>
-      teste
+      <Card />
      </div>
     </main>
      </>
