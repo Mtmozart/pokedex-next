@@ -1,4 +1,13 @@
-.teste{
-  width: 100%;
+.content{
+ background: rgba(255, 0, 0, 0.6);
+ width: 100%;
+ min-height: 100vh;
+ height: 100%;
+ display: flex;
+ justify-content: center; 
+ flex-wrap: wrap;
+ box-sizing: border-box;
+ 
+
 
 }

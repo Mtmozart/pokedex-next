@@ -2,7 +2,17 @@ import Image from "next/image"
 import styles from './page.module.scss'
 import Bulbassaur from '../../../public/images/bulbasaur.jpg'
 
-export default function Card(){
+export type pokemonsProps = {
+  id: number;
+  name: string;
+  srcImg: string;
+  number: number;
+  type: string[]; 
+  weight: number;
+};
+
+
+export default function Card({ name, srcImg, number, type, weight}: pokemonsProps){
 return(
   <>
   <section className={styles.content_card}>

@@ -1,30 +1,24 @@
+"server side"
 import Image from 'next/image'
 import styles from './page.module.scss'
 import Card from '@/components/card/card';
+import getData from '../utils/connect'
 
 
 
-async function getData() {
 
-  const res =  await fetch("https://pokeapi.co/api/v2/pokemon/1")
-
-  if(!res.ok){
-    throw new Error("Unexpected erro");
-  }
-
-  const data = res.json()
-
-  return data
-}
 
 export default async  function Home() {
-  const pokemon = await getData();
+  const pokemons = await getData();
+  console.log(pokemons)
  
   return (
       <>
      <main>
-     <div className={styles.teste}>
-      <Card />
+     <div className={styles.content}>
+    
+
+    
      </div>
     </main>
      </>
